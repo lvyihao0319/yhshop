@@ -130,27 +130,28 @@
 </template>
 
 <script>
-  import Swiper from 'swiper'
-  import 'swiper/dist/css/swiper.min.css'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 
-  import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
-  import ShopList from '../../components/ShopList/ShopList.vue'
+import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
+import ShopList from '../../components/ShopList/ShopList.vue'
 
-  export default {
-    mounted () {
-      new Swiper('.swiper-container',{
-        loop: true,
-        // 如果需要分页器
-        pagination: {
-          el: '.swiper-pagination',
-        }
-      })
-    },
-    components: {
-      HeaderTop,
-      ShopList
-    }
+export default {
+  mounted () {
+    /* eslint-disable no-new */
+    new Swiper('.swiper-container', {
+      loop: true,
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination'
+      }
+    })
+  },
+  components: {
+    HeaderTop,
+    ShopList
   }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
